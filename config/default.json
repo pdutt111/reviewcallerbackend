@@ -1,6 +1,6 @@
 {
   "web": {
-    "httpport": 3000,
+    "httpport": 1337,
     "httpsport": 443
   },
   "AWS_S3": {},
