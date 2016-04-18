@@ -8,6 +8,7 @@ var moment= require('moment');
 var async= require('async');
 var db=require('../db/DbSchema');
 var events = require('../events');
+var norepeat = require('array-norepeat');
 var log = require('tracer').colorConsole(config.get('log'));
 var apn=require('../notificationSenders/apnsender');
 var gcm=require('../notificationSenders/gcmsender');
@@ -137,11 +138,8 @@ router.get('/protected/search',params({query:['q','lat','lon']},{message : confi
         function(err, results){
             if(!err){
                 var response=results[0];
-                log.warn(results[0].length);
-                if(results[0].length==0){
                     response=results[0].concat(results[1])
-                }
-                res.json(response);
+                res.json(norepeat(response,false));
             }else{
                 log.error(err);
                 res.status(500).json(config.get('error.dberror'));
