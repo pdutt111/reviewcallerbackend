@@ -1,0 +1,94 @@
+{
+  "web": {
+    "httpport": 3000,
+    "httpsport": 443
+  },
+  "AWS_S3": {},
+  "mailer_options": {},
+  "twilio": {},
+  "smsIndia": {},
+  "mongo": {
+    "location": "mongodb://localhost/scathe",
+    "debug": false
+  },
+  "crypto": {
+    "algorithm": "aes-256-ctr",
+    "password": "pwoek@724"
+  },
+  "gcmServerKey":"",
+  "error": {
+    "webtoken": {
+      "expired": {
+        "result": "error",
+        "description": "expired web token"
+      },
+      "unknown": {
+        "result": "error",
+        "description": "unknown web token"
+      },
+      "notprovided": {
+        "result": "error",
+        "description": "no web token provided"
+      }
+    },
+    "user": {
+      "doesnotexist": {
+        "result": "error",
+        "description": "no such user present"
+      },
+      "exists": {
+        "result": "error",
+        "description": "user already present"
+      },
+      "errorcreating": {
+        "result": "error",
+        "description": "error creating user"
+      }
+    },
+    "nodetails": {
+      "result": "error",
+      "description": "insufficient data"
+    },
+    "unauthorized": {
+      "result": "error",
+      "description": "unauthorized"
+    },
+    "duplicate": {
+      "result": "error",
+      "description": "duplicate entry"
+    },
+    "dberror": {
+      "result": "error",
+      "description": "there was an error in database"
+    },
+    "internalservererror": {
+      "result": "error",
+      "description": "internal server error"
+    },
+    "badrequest": {
+      "result": "error",
+      "description": "bad request"
+    },
+    "notfound": {
+      "result": "error",
+      "description": "not found"
+    }
+  },
+  "geocoder": {},
+  "debug": true,
+  "jwtsecret": "test",
+  "ok": {
+    "result": "ok"
+  },
+  "pinbypass":true,
+  "log": {
+    "format": [
+      "{{timestamp}} <{{title}}> {{message}} (in {{file}}:{{line}})",
+      {
+        "error": "{{timestamp}} <{{title}}> {{message}} (in {{file}}:{{line}})\nCall Stack:\n{{stack}}"
+      }
+    ],
+    "dateformat": "HH:MM:ss.L",
+    "level": 0
+  }
+}
