@@ -1,11 +1,16 @@
-# Scathe #
-an app to make the world a better place
+# Reviewcaller#
+
+This is the backend for reviewcaller which is an app for reviewing anything or anyone. 
 
 ### Dependencies ###
 * Node
+* NPM
 
 ### Setup Instructions ###
 
-install nodejs using package manager
-
-    sudo apt-get install 
+follow the instructions
+ 
+        cd reviewcallerbackend/
+        npm install
+        node bin/www
+    
